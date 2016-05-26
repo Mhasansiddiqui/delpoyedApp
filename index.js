@@ -14,7 +14,7 @@ app.use(express.static(__dirname + '/public'));
 app.set("port", (process.env.PORT  || 5000));
 
 app.use(function(req,res ,next){
-   res.send('hi ') ;
+   res.sendFile('index.html') ;
    next();
 })
 
