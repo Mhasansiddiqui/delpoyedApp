@@ -11,7 +11,7 @@ var app = express();
 app.set("port", (process.env.PORT  || 5000));
 
 app.use(function(req,res ,next){
-   res.sendFile('public/index.html' , { root : __dirname});
+   res.send('hi hasan');
    next();
 })
 app.use(function(err,req,res ,next){
