@@ -1,0 +1,88 @@
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+    }
+    body, button {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+   
+    img {
+      width: 100%;
+    }
+    nav {
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      background: rgba(255, 255, 255, 0.8);
+    }
+    nav li, nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center
+    }
+    nav li, nav a {
+      display: inline-block;
+    }
+    nav a {
+      padding: 20px;
+      color: #333;
+      text-decoration: none;
+    }
+    a:hover {
+      background: #fff;
+    }
+    a.active {
+      background: rgba(0, 0, 0, 0.13);
+      color: #fff;
+    }
+    .wrap {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      background-color: rgba(255, 255, 255, 0.68)
+    
+    }
+    section {
+      padding: 50px 0 30px 0;
+    }
+    footer {
+      text-align: center;
+    }
+    button {
+      font-size: 18px;
+      border: 0;
+      padding: 15px 30px;
+      background: #00AC7F;
+      color: #fff;
+      cursor: pointer;
+    }
+    .md-button{
+     margin: 0;
+     padding: 0;
+    }
+    .background{
+        background-color: rgba(20,40,0,0.1)     ;  
+    }
+    .background.home-class{
+         background-color: rgba(102, 136, 68, 0.61);
+    }
+        .background.services-class{
+         background-color: rgba(102,34,68,0.61);
+    }
+        .background.pricing-class{
+        background-color: rgba(102,119,68,0.6);
+    }
+        .background.contactus-class{
+        background-color: rgba(17,34,68,0.61);
+    }
+
+    .home-class{ background-color: #684 !important }
+    .services-class{ background-color: #624 !important }
+    .pricing-class{ background-color: #674 !important }
+    .contactus-class{ background-color: #124  !important}

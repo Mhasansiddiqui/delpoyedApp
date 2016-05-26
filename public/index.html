@@ -1,0 +1,116 @@
+<html>
+  <head>     
+      <link rel="stylesheet" type="text/css" href="default.css">
+      <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.min.css">      
+      
+       <script    src="bower_components/angular/angular.min.js" ></script>
+       <script    src="bower_components/angular-animate/angular-animate.min.js" ></script>
+       <script    src="bower_components/angular-aria/angular-aria.min.js" ></script>
+       <script    src="bower_components/angular-material/angular-material.min.js" ></script>
+       <script    src="bower_components/angular-messages/angular-messages.min.js" ></script>
+       <script    src="bower_components/angular-ui-router/release/angular-ui-router.min.js" ></script>
+       <script    src="bower_components/material-design-icons/"></script></script>
+        <script   src="bower_components/angular-scroll/angular-scroll.js" ></script>
+       <script    src="module.js"></script>
+  </head>
+  <body  ng-app="App">
+
+  <div class="background" ng-class="myVar"   ng-controller="MyCtrl" ><!-- start background -->
+
+    <div class="wrap"><!-- start wrap  -->
+
+<header>   <!-- head start -->
+  <div layout="row" >
+    <nav  class="md-tall ">           
+          <div style="background-color: cadetblue;" ng-class="myVar"  layout="row" layout-xs="column"  layout-align="end center" >  
+             <div layout="row" flex style="color:#FFFFFF;" class="md-title">
+               www.gracious.digitizing@gmail.com
+             </div>
+                
+                 <li><a   href="#home"  ng-click="myVar='home-class'"  du-smooth-scroll du-scrollspy  >Home </a> </li>
+                 <li><a  href="#services"  ng-click="myVar='services-class'"  du-smooth-scroll du-scrollspy >Services </a></li>
+                 <li><a  href="#pricing"  ng-click="myVar='pricing-class'"  du-smooth-scroll du-scrollspy >Pricing</a></li>
+                 <li><a  href="#contactus"  ng-click="myVar='contactus-class'"  du-smooth-scroll du-scrollspy >Contact Us
+                </a> </li>
+                  
+          <!--  <md-button  href="#home"  ng-click="myVar='home-class'"  du-smooth-scroll du-scrollspy  >Home</md-button>
+                 <md-button  href="#services"  ng-click="myVar='services-class'"  du-smooth-scroll du-scrollspy >Services</md-button>
+                 <md-button  href="#pricing"  ng-click="myVar='pricing-class'"  du-smooth-scroll du-scrollspy >Pricing</md-button>
+                 <md-button  href="#contactus"  ng-click="myVar='contactus-class'"  du-smooth-scroll du-scrollspy >Contact Us
+                 </md-button>                        -->
+          </div>     
+    </nav>
+    <h1 layout="row" style="color:#F91C1C;" class="md-display-2">
+     
+    </h1>
+</div>
+</header><!-- head end -->
+  
+<section id="home" layout="column" ><!-- section one start -->
+  <h2 class="md-title" style="text-align:center">
+    Creating Most High-Quality Business Logos For You
+  </h2>
+  <div layout="row" layout-xs="column">
+    <img   src="digitizing/digitizing1.jpg">  
+    <img  src="digitizing/digitizing3.jpg">
+    <img  src="digitizing/digitizing2.jpg">
+  </div>
+</section><!-- section one end -->
+
+<section id="services" layout="column"><!-- section two start -->
+  <h2 class="md-headline" > 
+    <b> Services  </b>
+  </h2> 
+  <div class="md-title">Custom Embroidery Digitizing services and Vector Art services provider</div>
+  <p class="md-body-2">We began Digitizing when it was called Punching. Our many years of experience 
+      combined with our stringent  work process ensures that you receive a machine-ready design every time. We focus on limiting knots and thread breaks to make your embroidery machines run more efficiently. Test us out and you will see why we have worked with some of the biggest names in the embroidery business for so many years.
+  </p>
+ <div class="md-title"><b> Embroidery digitizing quality services </b> </div>
+    <p class="md-body-2">DigitizingToday.com is a group of professional digitizers and designers that cater the embroidery   Industry. Serving and digitizing / punching custom designs for garment manufacturers, promotion companies, embroiderers and digitizers themselves.
+    Custom Embroidery Digitizing Service Flat rate
+    Custom embroidery digitization means you send us a picture or image as an artwork and we convert that picture in to stitches. Our professionals provide fast turnaround for any custom embroidery digitizing to all clients. We are so sure of the service and quality, we offer a first order on 50% off as well. You can send a small logo or a picture of an animal, human, scenery, construction. In fact anything that you can think of and we will do the job with perfection!.
+    </p>
+  </section><!-- section two end -->
+
+  <section id="pricing"><!-- section three start -->
+    <h2>Pricing</h2>
+      <div layout="column">
+        <img src="digitizing/pricing.png">
+      </div>
+  </section><!-- section three end -->
+
+  <section id="contactus"><!-- section four start -->
+    <h2>Contact Us</h2>  
+    <div  layout="column" layout-padding ng-cloak>
+      <md-content class="autoScroll" >
+            <md-input-container class="md-icon-float md-block">
+              <!-- Use floating label instead of placeholder -->
+              <label>Name</label>
+              <md-icon md-svg-src="bower_components/material-design-icons/social/svg/production/ic_person_24px.svg" class="name"></md-icon>
+              <input ng-model="user.name" type="text">
+            </md-input-container>
+            <md-input-container md-no-float class="md-block">
+              <md-icon md-svg-src="bower_components/material-design-icons/communication/svg/design/ic_phone_24px.svg"></md-icon>
+              <input ng-model="user.phone" type="text" placeholder="Phone Number">
+            </md-input-container>
+            <md-input-container class="md-block">
+              <!-- Use floating placeholder instead of label -->
+              <md-icon md-svg-src="bower_components/material-design-icons/communication/svg/production/ic_email_24px.svg" class="email"></md-icon>
+              <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
+            </md-input-container>
+            <md-input-container md-no-float class="md-block">
+              <md-icon md-svg-src="bower_components/material-design-icons/maps/svg/production/ic_place_24px.svg" style="display:inline-block;"></md-icon>
+              <input ng-model="user.address" type="text" placeholder="Address" >
+            </md-input-container>
+            <md-input-container layout="row"  layout-align="end center"  class="md-icon-float md-icon-right md-block">
+               <md-button class="md-raised md-primary">Submit</md-button>
+            </md-input-container>
+            </md-content>
+       </div>
+  </section><!-- section four end -->
+      <footer>
+      </footer>
+      </div> <!-- wrap end -->
+      </div> <!-- background end -->
+  </body>
+</html>
