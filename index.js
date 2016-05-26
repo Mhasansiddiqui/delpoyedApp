@@ -14,6 +14,11 @@ app.use(function(req,res ,next){
    res.sendFile('public/index.html' , { root : __dirname});
    next();
 })
+app.use(function(err,req,res ,next){
+  res.send(err);
+   next();
+})
+
 
 
 app.listen(app.get("port"), function () {
