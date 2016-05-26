@@ -1,0 +1,18 @@
+{
+  "name": "node-example",
+  "version": "1.0.0",
+  "description": "the ex",
+  "main": "web.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "examle",
+    "heoku"
+  ],
+  "author": "hasan siddiqui",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
