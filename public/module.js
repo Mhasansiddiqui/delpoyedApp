@@ -6,7 +6,7 @@ angular.module('App' , ['ngMaterial' , 'ui.router' ,'duScroll'  ] )
     $document.scrollTopAnimated(0, 2000).then(function() {
       
       });
-    $scope.show = true;
+    $scope.show = false;
 
     $scope.showMe = function(){
        if($scope.show == false){
