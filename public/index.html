@@ -20,25 +20,27 @@
     <div class="wrap"><!-- start wrap  -->
 
 <header>   <!-- head start -->
+
+
   <div layout="row" >
     <nav  class="md-tall ">           
-          <div class="md-whiteframe-12dp" style="background-color: cadetblue;" ng-class="myVar"  layout="row" layout-xs="column"  layout-align="end center" >  
-             <div layout="row" flex style="color:#FFFFFF;" class="md-title">
-               www.gracious.digitizing@gmail.com
+          <div class="md-whiteframe-12dp" style="background-color: cadetblue; text-align:center" ng-class="myVar"   layout="row" layout-xs="column" >  
+
+
+             <div layout="row" hide-xs  flex style="color:#FFFFFF;" class="md-title">
+                <p >www.gracious.digitizing@gmail.com</p> 
              </div>
-                
-                 <li><a   href="#home"  ng-click="myVar='home-class'"  du-smooth-scroll du-scrollspy  >Home </a> </li>
-                 <li><a  href="#services"  ng-click="myVar='services-class'"  du-smooth-scroll du-scrollspy >Services </a></li>
-                 <li><a  href="#pricing"  ng-click="myVar='pricing-class'"  du-smooth-scroll du-scrollspy >Pricing</a></li>
-                 <li><a  href="#contactus"  ng-click="myVar='contactus-class'"  du-smooth-scroll du-scrollspy >Contact Us
-                </a> </li>
+              
+
+        <md-button layout-xs="row" hide-gt-sm ng-click="showMe()" class="md-icon-button" aria-label="Settings">
+          <md-icon md-svg-icon="bower_components/material-design-icons/menue/ic_menu_24px.svg"></md-icon>
+        </md-button>
+                 <a   ng-show="show" href="#home"  ng-click="toggle() ; myVar='home-class'"  du-smooth-scroll du-scrollspy  >Home </a>                
+                 <a  ng-show="show"  href="#services"  ng-click="toggle() ;myVar='services-class'"  du-smooth-scroll du-scrollspy >Services </a>
+                 <a  ng-show="show"  href="#pricing"  ng-click=" toggle() ;myVar='pricing-class'"  du-smooth-scroll du-scrollspy >Pricing</a>
+                 <a  ng-show="show"  href="#contactus"  ng-click=" toggle() ;myVar='contactus-class'"  du-smooth-scroll du-scrollspy >Contact Us
+                </a>
                   
-          <!--  <md-button  href="#home"  ng-click="myVar='home-class'"  du-smooth-scroll du-scrollspy  >Home</md-button>
-                 <md-button  href="#services"  ng-click="myVar='services-class'"  du-smooth-scroll du-scrollspy >Services</md-button>
-                 <md-button  href="#pricing"  ng-click="myVar='pricing-class'"  du-smooth-scroll du-scrollspy >Pricing</md-button>
-                 <md-button  href="#contactus"  ng-click="myVar='contactus-class'"  du-smooth-scroll du-scrollspy >Contact Us
-                 </md-button>                        -->
-          </div>     
     </nav>
     <h1 layout="row" style="color:#F91C1C;" class="md-display-2">
      

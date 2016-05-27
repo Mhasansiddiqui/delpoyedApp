@@ -6,7 +6,17 @@ angular.module('App' , ['ngMaterial' , 'ui.router' ,'duScroll'  ] )
     $document.scrollTopAnimated(0, 2000).then(function() {
       
       });
+    $scope.show = true;
 
+    $scope.showMe = function(){
+       if($scope.show == false){
+         $scope.show = true;
+       }
+    }
+    $scope.toggle = function(){
+      console.log('aaaa');
+       $scope.show = false;
+    }
 
     $scope.toTheTop = function() {
       $document.scrollTopAnimated(0, 5000).then(function() {

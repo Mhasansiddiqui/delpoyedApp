@@ -25,6 +25,9 @@
       padding: 0;
       text-align: center
     }
+
+    
+
     nav li, nav a {
       display: inline-block;
     }
@@ -73,16 +76,18 @@
          background-color: rgba(102, 136, 68, 0.61);
     }
         .background.services-class{
-         background-color: rgba(102,34,68,0.61);
+         background-color: rgba(41, 143, 154 , 0.6);
     }
         .background.pricing-class{
         background-color: rgba(102,119,68,0.6);
     }
         .background.contactus-class{
-        background-color: rgba(17,34,68,0.61);
+        background-color:rgba(100, 104,111 , 0.6)  !important
     }
 
-    .home-class{ background-color: #684 !important }
-    .services-class{ background-color: #624 !important }
+
+    .home-class{ background-color: #684 !important  ;}
+
+    .services-class{ background-color: rgb(41, 143, 154) !important }
     .pricing-class{ background-color: #674 !important }
-    .contactus-class{ background-color: #124  !important}
+    .contactus-class{ background-color: rgb(100, 104, 111)  !important}
