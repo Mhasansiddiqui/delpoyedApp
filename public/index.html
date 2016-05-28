@@ -23,9 +23,19 @@
 
 
   <div layout="row" >
-    <nav  class="md-tall ">           
+    <nav >           
           <div class="md-whiteframe-12dp" style="background-color: cadetblue; text-align:center" ng-class="myVar" 
-            layout-lg="row" layout-xs="column" layout-gt-md="column">  
+            layout-xs="column" 
+            layout-lg="row" 
+            layout-gt-xs="column"
+            layout-md="column"
+            layout-sm="column"             
+            layput-gt-xs="column"
+            layout-gt-sm="column"
+            layout-gt-md="column"
+            layout-gt-lg="row"
+            layout-xl="row"
+            >  
 
 
              <div layout="row" hide-xs  flex style="color:#FFFFFF;" class="md-title">
@@ -33,19 +43,48 @@
              </div>
               
 
-        <md-button layout-xs="row" hide-md hide-gt-xs hide-gt-sm ng-click="showMe()" class="md-icon-button" aria-label="Settings">
+        <md-button layout-xs="row"  hide-lg ng-click="showMe()" class="md-icon-button" aria-label="Settings">
           <md-icon md-svg-icon="bower_components/material-design-icons/menue/ic_menu_24px.svg"></md-icon>
         </md-button>
 
-            <a hide-gt-sm   ng-show="show" href="#home"  ng-click="toggle() ; myVar='home-class'"  du-smooth-scroll du-scrollspy  >Home </a> 
-            <a hide-gt-sm  ng-show="show"  href="#services"  ng-click="toggle() ;myVar='services-class'"  du-smooth-scroll du-scrollspy >Services </a> 
-            <a hide-gt-sm ng-show="show"  href="#pricing"  ng-click=" toggle() ;myVar='pricing-class'"  du-smooth-scroll du-scrollspy >Pricing</a>
-            <a  hide-gt-sm ng-show="show"  href="#contactus"  ng-click=" toggle() ;myVar='contactus-class'"  du-smooth-scroll du-scrollspy >Contact Us            </a>
+            <a  
+            ng-show="show" href="#home"  ng-click="toggle() ; myVar='home-class'"  du-smooth-scroll du-scrollspy  >Home </a> 
+
+
+            <a 
+
+            ng-show="show"  href="#services"  ng-click="toggle() ;myVar='services-class'"  du-smooth-scroll du-scrollspy >Services </a> 
+            <a 
+              ng-show="show"  href="#pricing"  ng-click=" toggle() ;myVar='pricing-class'"  du-smooth-scroll du-scrollspy >Pricing</a>
+            <a   ng-show="show"  href="#contactus"  ng-click=" toggle() ;myVar='contactus-class'"  du-smooth-scroll du-scrollspy >Contact Us            </a>
                   
-            <a hide-xs   href="#home"  ng-click=" myVar='home-class'"  du-smooth-scroll du-scrollspy  >Home </a>
-            <a hide-xs  href="#services"  ng-click="myVar='services-class'"  du-smooth-scroll du-scrollspy >Services </a>
-            <a hide-xs   href="#pricing"  ng-click=" myVar='pricing-class'"  du-smooth-scroll du-scrollspy >Pricing</a>
-            <a hide-xs   href="#contactus"  ng-click=" myVar='contactus-class'"  du-smooth-scroll du-scrollspy >Contact Us            </a>
+            <a    
+
+            hide-xs             
+            hide-sm 
+            hide-md
+            
+
+              href="#home"  ng-click=" myVar='home-class'"  du-smooth-scroll du-scrollspy  >Home </a>
+            <a  
+            
+            
+            hide-xs             
+            hide-sm 
+            hide-md
+
+             href="#services"  ng-click="myVar='services-class'"  du-smooth-scroll du-scrollspy >Services </a>
+            <a 
+            
+            hide-xs             
+            hide-sm 
+            hide-md
+              href="#pricing"  ng-click=" myVar='pricing-class'"  du-smooth-scroll du-scrollspy >Pricing</a>
+            <a 
+            hide-xs             
+            hide-sm 
+            hide-md
+              href="#contactus"  ng-click=" myVar='contactus-class'"  du-smooth-scroll du-scrollspy >Contact Us            </a>
            
 
             
