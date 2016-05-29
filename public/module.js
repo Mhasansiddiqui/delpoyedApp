@@ -8,10 +8,10 @@ angular.module('App' , ['ngMaterial' , 'ui.router' ,'duScroll'  ] )
        if($scope.show == false){
          $scope.show = true;
        }
-       console.log();
+      
     }
     $scope.toggle = function(){
-      console.log('aaaa');
+     
        $scope.show = false;
     }
 
