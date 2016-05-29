@@ -15,18 +15,18 @@
     nav {
       position: fixed;
       z-index: 1;
-     /* top: 0;
+      top: 0;
       left: 0;
-      right: 0;*/
+      right: 0;
       background: #fff;
       background: rgba(255, 255, 255, 0.8);
     }
-  /*  nav li, nav ul {
+    nav li, nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
       text-align: center
-    }*/
+    }
 
     
 
