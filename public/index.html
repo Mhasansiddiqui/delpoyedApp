@@ -1,5 +1,9 @@
 <html>
   <head>     
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
       <link rel="stylesheet" type="text/css" href="default.css">
       <link rel="stylesheet" type="text/css" href="./bower_components/angular-material/angular-material.min.css">      
       
@@ -8,12 +12,14 @@
        <script    src="./bower_components/angular-aria/angular-aria.min.js" ></script>
        <script    src="./bower_components/angular-material/angular-material.min.js" ></script>
        <script    src="./bower_components/angular-messages/angular-messages.min.js" ></script>
-       <script    src="./bower_components/angular-ui-router/release/angular-ui-router.min.js" ></script>
-       <script    src="./bower_components/material-design-icons/"></script></script>
+       <script    src="./bower_components/angular-ui-router/release/angular-ui-router.min.js" ></script>      
        <script   src="./bower_components/angular-scroll/angular-scroll.js" ></script>
        <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 
        <script    src="./module.js"></script>
+
+
+       <script src="./firebasejs.js"></script>
   </head>
   <body  ng-app="App">
 
@@ -21,7 +27,7 @@
 
     <div class="wrap"><!-- start wrap  -->
 
- <!-- <header >    head start -->
+  <header >  <!-- head start -->
 
 
   <div layout="row" >
@@ -97,7 +103,7 @@
      
     </h1>
 </div>
- <!--</header> head end -->
+ </header><!-- head end -->
   
 <section id="home" layout="column" ><!-- section one start -->
   <h2 class="md-title" style="text-align:center">
@@ -134,29 +140,29 @@
 
   <section id="contactus"><!-- section four start -->
     <h2>Contact Us</h2>  
-    <div  layout="column" layout-padding ng-cloak>
+    <div  layout="column" layout-padding ng-cloak  ng-controller="FormCtrl" >
       <md-content class="autoScroll" >
             <md-input-container class="md-icon-float md-block">
               <!-- Use floating label instead of placeholder -->
               <label>Name</label>
-              <md-icon md-svg-src="bower_components/material-design-icons/social/svg/production/ic_person_24px.svg" class="name"></md-icon>
+              <md-icon md-svg-src="./bower_components/material-design-icons/social/svg/production/ic_person_24px.svg" class="name"></md-icon>
               <input ng-model="user.name" type="text">
             </md-input-container>
             <md-input-container md-no-float class="md-block">
-              <md-icon md-svg-src="bower_components/material-design-icons/communication/svg/design/ic_phone_24px.svg"></md-icon>
+              <md-icon md-svg-src="./bower_components/material-design-icons/communication/svg/design/ic_phone_24px.svg"></md-icon>
               <input ng-model="user.phone" type="text" placeholder="Phone Number">
             </md-input-container>
             <md-input-container class="md-block">
               <!-- Use floating placeholder instead of label -->
-              <md-icon md-svg-src="bower_components/material-design-icons/communication/svg/production/ic_email_24px.svg" class="email"></md-icon>
+              <md-icon md-svg-src="./bower_components/material-design-icons/communication/svg/production/ic_email_24px.svg" class="email"></md-icon>
               <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
             </md-input-container>
             <md-input-container md-no-float class="md-block">
-              <md-icon md-svg-src="bower_components/material-design-icons/maps/svg/production/ic_place_24px.svg" style="display:inline-block;"></md-icon>
+              <md-icon md-svg-src="./bower_components/material-design-icons/maps/svg/production/ic_place_24px.svg" style="display:inline-block;"></md-icon>
               <input ng-model="user.address" type="text" placeholder="Address" >
             </md-input-container>
             <md-input-container layout="row"  layout-align="end center"  class="md-icon-float md-icon-right md-block">
-               <md-button class="md-raised md-primary">Submit</md-button>
+               <md-button class="md-raised md-primary" ng-click="save()">Submit</md-button>
             </md-input-container>
             </md-content>
        </div>
