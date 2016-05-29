@@ -10,7 +10,9 @@
        <script    src="./bower_components/angular-messages/angular-messages.min.js" ></script>
        <script    src="./bower_components/angular-ui-router/release/angular-ui-router.min.js" ></script>
        <script    src="./bower_components/material-design-icons/"></script></script>
-        <script   src="./bower_components/angular-scroll/angular-scroll.js" ></script>
+       <script   src="./bower_components/angular-scroll/angular-scroll.js" ></script>
+       <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
        <script    src="./module.js"></script>
   </head>
   <body  ng-app="App">
@@ -19,7 +21,7 @@
 
     <div class="wrap"><!-- start wrap  -->
 
-<header>   <!-- head start -->
+ <!-- <header >    head start -->
 
 
   <div layout="row" >
@@ -44,7 +46,7 @@
               
 
         <md-button layout-xs="row"  hide-lg ng-click="showMe()" class="md-icon-button" aria-label="Settings">
-          <md-icon md-svg-icon="bower_components/material-design-icons/menue/ic_menu_24px.svg"></md-icon>
+          <md-icon md-svg-icon="bower_components/material-design-icons/menue/ic_menu_48px.svg"></md-icon>
         </md-button>
 
             <a  
@@ -95,7 +97,7 @@
      
     </h1>
 </div>
-</header><!-- head end -->
+ <!--</header> head end -->
   
 <section id="home" layout="column" ><!-- section one start -->
   <h2 class="md-title" style="text-align:center">

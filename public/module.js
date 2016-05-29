@@ -1,10 +1,6 @@
 angular.module('App' , ['ngMaterial' , 'ui.router' ,'duScroll'  ] )
    .controller('MyCtrl', function($scope, $document){
-
-
-
-    $document.scrollTopAnimated(0, 2000).then(function() {
-      
+    $document.scrollTopAnimated(0, 2000).then(function() {      
       });
     $scope.show = false;
 
@@ -12,6 +8,7 @@ angular.module('App' , ['ngMaterial' , 'ui.router' ,'duScroll'  ] )
        if($scope.show == false){
          $scope.show = true;
        }
+       console.log();
     }
     $scope.toggle = function(){
       console.log('aaaa');
