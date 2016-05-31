@@ -1,6 +1,6 @@
  
 angular.module('App'  )
-   .controller('FormCtrl', function($scope, $document){
+   .controller('FormCtrl', function($scope, $document , $http){
 
 		 // Initialize Firebase
 		  var config = {
@@ -11,14 +11,30 @@ angular.module('App'  )
 		  };
 		  firebase.initializeApp(config);
 
+          var req = {
+			 method: 'POST',
+			 url: 'http://localhost:5000/index.html',
+			 headers: {
+			   'Content-Type': undefined
+			 },
+			 data: { test: 'test' }
+			}
 
-		  // Get a reference to the database service
-		  var database = firebase.database();
-		$scope.save = function(){
-		 firebase.database().ref('anonymouse/').set($scope.user);
+			$http(req).then(function(){
+              console.log('upper');
+              
+			}, function(){
+              console.log(req);
+			});
 
-		 firebase.database().ref('anonymouse/').on('value', function(snapshot) {
-		      console.log(snapshot);
-		});
-	}
+			/*
+			// Get a reference to the database service
+				var database = firebase.database();
+					$scope.save = function(){
+					firebase.database().ref('anonymouse/').set($scope.user);
+					firebase.database().ref('anonymouse/').on('value', function(snapshot) {
+					console.log(snapshot);
+				});
+			}
+			*/
 });
