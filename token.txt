@@ -1,0 +1,2 @@
+
+C:\Program Files\curl-7.49.0-win64-mingw\bin>curl --header "Authorization: key=AIzaSyDOFS42pZs4-iCI3SqsaJRbYBi6rgdwNhM" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration_ids\":[\"e4nDzxDxZtw:APA91bHZTaQNU_t-6xyxJ9yCrV-hyv1teXYbkVvGovOkZjQdWFGbIWoUQhDH-VZPVUaHMoIIcD5Y5GtKYFDeJn1g9DI7lehibY_Ke-SbB_CiggzTKCnv1NaapvXaCMdMPoRL4HOqugSo\"]}

@@ -1,0 +1,9 @@
+curl --header "Authorization: key=AIzaSyDOFS42pZs4-iCI3SqsaJRbYBi6rgdwNhM" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration_ids\":[\"dC5pizbSkaI:APA91bE1Wr5HAFZ5kGefXXMGvaFzssI7kaShDs5TTTdZC378F97iRAEY74ekm9DghyytFBTy_CZgczFTa6lOmPkigaQhhwMnlNJpjDG3X_J8lV8eng1k1W-lqU63PLVWIcqpnTvYlZmA\"]}"
+
+
+
+56f13533-0b05-4cc1-a9f4-a9e23e2353ec
+
+curl -X GET https://api.heroku.com/apps/56f13533-0b05-4cc1-a9f4-a9e23e2353ec  \
+-H "Accept: application/vnd.heroku+json; version=3" \
+-H "Authorization: Bearer $TUTORIAL_KEY"
