@@ -11,23 +11,7 @@ angular.module('App'  )
 		  };
 		  firebase.initializeApp(config);
 
-          var req = {
-			 method: 'POST',
-			 url: 'http://localhost:5000/index.html',
-			 headers: {
-			   'Content-Type': undefined
-			 },
-			 data: { test: 'test' }
-			}
-
-			$http(req).then(function(){
-              console.log('upper');
-              
-			}, function(){
-              console.log(req);
-			});
-
-			/*
+        	/*
 			// Get a reference to the database service
 				var database = firebase.database();
 					$scope.save = function(){
