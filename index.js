@@ -16,6 +16,10 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
+
+app.set("port", (process.env.PORT  || 5000));
+
+
 app.post('/sendMail',function(req,res){
    /*console.log(req.body.endpoint);
    console.log();*/
@@ -169,6 +173,7 @@ function sendMessage(auth, a) {
 })
 
 
-app.listen(5000,function () {
-	console.log('abc');
+
+app.listen(app.get("port"), function () {
+    console.log('running server on 5000');
 });
