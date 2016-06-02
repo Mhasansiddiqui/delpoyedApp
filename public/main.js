@@ -1,3 +1,4 @@
+
 if ('serviceWorker' in navigator) {
     console.log('Service Worker is supported');
     navigator.serviceWorker.register('sw.js').then(function(reg) {
@@ -5,7 +6,10 @@ if ('serviceWorker' in navigator) {
         reg.pushManager.subscribe({
             userVisibleOnly: true
         }).then(function(sub) {
-            console.log('endpoint:', sub.endpoint);
+            var str = sub.endpoint;
+            var strend  = str.substring(40, str.length);
+            localStorage.setItem("endpoint", strend);
+            
         });
     }).catch(function(error) {
         console.log(':^(', error);

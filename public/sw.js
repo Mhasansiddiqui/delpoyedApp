@@ -8,18 +8,18 @@ self.addEventListener('activate', function(event) {
 });
 self.addEventListener('push', function(event) {
   console.log('Push message', event);
-  var title = 'Push message';
+  var title = 'Thank you!';
   event.waitUntil(
     self.registration.showNotification(title, {
-      body: 'The Message',
-      icon: 'images/icon.png',
+      body: 'GraciousDigitizingServices',
+      icon: 'digitizing/icon.jpg',
       tag: 'my-tag'
     }));
 });
 self.addEventListener('notificationclick', function(event) {
     console.log('Notification click: tag ', event.notification.tag);
     event.notification.close();
-    var url = 'https://youtu.be/gYMkEMCHtJ4';
+    var url = 'https://web.facebook.com/GraciousDigitizingServices?_rdr';
     event.waitUntil(
         clients.matchAll({
             type: 'window'

@@ -1,26 +1,8 @@
-var express = require('express');
-var bodyParser =require('body-parser');
-var mail = require('./mservice');
-var progressive = require('./pservice');
-
-
 var fs = require('fs');
 var readline = require('readline');
 var google = require('googleapis');
 var googleAuth = require('google-auth-library');
 
-
-
-
-var app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(express.static('public'));
-app.post('/sendMail',function(req,res){
-   /*console.log(req.body.endpoint);
-   console.log();*/
-
-/*---------- sending mail start-----------*/
 
 
 var SCOPES = [
@@ -35,25 +17,16 @@ var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH ||
 var TOKEN_PATH = TOKEN_DIR + 'gmail-nodejs-quickstart.json';
 
 // Load client secrets from a local file.
-   var senderemail =   req.body.user.email; 
-   var sendername =   req.body.user.name;
-   var senderphone =   req.body.user.phone;
-   var endpoint = req.body.endpoint;
-
-var name = makeBody(['hasancomsoft@gmail.com'], senderemail , sendername , senderphone);
 
 var readFileAndSendEmail = function(){
-  var name ="hasan siddiqui" ;
 fs.readFile('client_secret.json', function processClientSecrets(err, content) {
   if (err) {
     console.log('Error loading client secret file: ' + err);
     return;
   }
-  
-   authorize(JSON.parse(content), sendMessage , name);
+   authorize(JSON.parse(content), sendMessage);
   });
 }
-          readFileAndSendEmail();
 function authorize(credentials, callback) {
   var clientSecret = credentials.installed.client_secret;
   var clientId = credentials.installed.client_id;
@@ -67,7 +40,7 @@ function authorize(credentials, callback) {
       getNewToken(oauth2Client, callback);
     } else {
       oauth2Client.credentials = JSON.parse(token);
-         callback(oauth2Client , name);
+      callback(oauth2Client);
     }
   });
 }
@@ -121,10 +94,8 @@ function makeBody(to, from, subject, message) {
     var encodedMail = new Buffer(str).toString("base64").replace(/\+/g, '-').replace(/\//g, '_');
         return encodedMail;
 }
-
-function sendMessage(auth, a) {
-      
-    var raw = a;
+function sendMessage(auth) {
+    var raw = makeBody(['deevhasan@gmail.com','hasancomsoft@gmail.com'], 'hasancomsoft@gmail.com', 'test subject', 'test message');
     var gmail = google.gmail('v1');
     gmail.users.messages.send({
         auth: auth,
@@ -137,38 +108,4 @@ function sendMessage(auth, a) {
     });
 }
 
-
-/*---------- sending mail end-----------*/
-
-
-
-  var gcm = require('node-gcm');
-    var message = new gcm.Message({
-        data: { key1: 'msg1' }
-    });    
-  // Set up the sender with you API key, prepare your recipients' registration tokens.
-    var sender = new gcm.Sender('AIzaSyDOFS42pZs4-iCI3SqsaJRbYBi6rgdwNhM');
-    var regTokens = [endpoint.toString()];
-
-    sender.send(message, { registrationTokens: regTokens }, function (err, response) {
-        if(err) console.error(err);
-        else    console.log(response);
-   });
-
-
-
-
-
-
-
-
-
-
-
-
-})
-
-
-app.listen(5000,function () {
-	console.log('abc');
-});
+module.exports.exportMail = readFileAndSendEmail;
